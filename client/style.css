@@ -1,0 +1,85 @@
+body {
+  background-color: #525354;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the form and messages */
+.container {
+  background-color: #ffffff;
+  padding: 100px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 99%;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Form Styling */
+.message-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.message-form input,
+.message-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.message-form input:focus,
+.message-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.message-form button {
+  background-color: #007bff;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 15px 25px;
+  border: solid 1px black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.message-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Messages Container Styling */
+.messages-container {
+  margin-top: 15px;
+  padding: 10px;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.messages-container div {
+  background-color: #eaeaea;
+  padding: 15px;
+  margin-bottom: 2px;
+  border-radius: 5px;
+}
+
+.messages-container div p {
+  margin: 5px 0;
+}
+
+.messages-container div .username {
+  font-weight: bold;
+  color: #007bff;
+}
