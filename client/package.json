@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite bouild",
+    "build": "npm install && vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
