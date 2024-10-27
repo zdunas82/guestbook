@@ -27,7 +27,7 @@ async function loadMessages() {
     const response = await fetch("http://localhost:8080/messages");
 
       const messages = await response.json();
-      messagesContainer.innerHTML = ""; // Clear previous messages
+      messagesContainer.innerHTML = ""; // clear previous messages
 
       messages.forEach((msg) => {
         const messageElement = document.createElement("div");
