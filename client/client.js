@@ -9,7 +9,6 @@ async function handleSubmit(event) {
   const body = Object.fromEntries(formData);
   console.log("Form Data", body);
 
- 
     // Make a post request
     const response = await fetch("http://localhost:8080/message", {
       method: "POST",
@@ -23,7 +22,6 @@ async function handleSubmit(event) {
       // Reload messages after submission to include the newly added message
       loadMessages();
   }
-
 // Load all messages from the server and display them
 async function loadMessages() {
     const response = await fetch("http://localhost:8080/messages");
@@ -36,8 +34,11 @@ async function loadMessages() {
         messageElement.className = "message";
         messageElement.textContent = `${msg.msg_name}: ${msg.content}`;
         messagesContainer.appendChild(messageElement);
+
+        //function to reset the input fields after submission
+        messageForm.reset();
       });
-    }
+    } 
     
 // Adding an event listener to the form
 messageForm.addEventListener("submit", handleSubmit);
